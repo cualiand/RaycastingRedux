@@ -16,10 +16,10 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        GetComponent<Rigidbody>().velocity = transform.forward * speed + Physics.gravity;
+        GetComponent<Rigidbody>().velocity = transform.right * speed + Physics.gravity;
 
-        Ray moveRay = new Ray(transform.position, transform.forward);
-        Debug.DrawRay(transform.position, transform.forward * detectDistance, Color.red);
+        Ray moveRay = new Ray(transform.position, transform.right);
+        Debug.DrawRay(transform.position, transform.right * detectDistance, Color.red);
 
         if (Physics.SphereCast(moveRay, .5f, detectDistance)) {
             Debug.Log("detected");

@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class catAI : MonoBehaviour {
 
     public Transform mouse;
     public float chaseSpeed = 1000f;
+    public AudioSource eatSound;
 
 	
 	
@@ -27,14 +29,15 @@ public class catAI : MonoBehaviour {
             {
                 if (catRayHitInfo.collider.tag == "Mouse")
                 {
-                    if (catRayHitInfo.distance <= 500f)
+                    if (catRayHitInfo.distance <= 500f) //when cat sees mouse
                     {
                         Debug.Log("mouse chased");
                         GetComponent<Rigidbody>().AddForce(directionToMouse.normalized * chaseSpeed);
                     }
-                    if (catRayHitInfo.distance <= 2f)
+                    if (catRayHitInfo.distance <= 2f) //when cat touches mouse
                     {
                         Debug.Log("mouse caught!");
+                        eatSound.PlayOneShot(eatSound.clip, 1f);
                         Destroy(mouse.gameObject);
                     }
                 }
