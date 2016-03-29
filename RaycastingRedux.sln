@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{7D788D24-D7FD-35D9-55B9-43CEEF8F6C86}") = "RaycastingRedux", "Assembly-CSharp.csproj", "{B015B9FD-C48C-D0D4-01A3-E30000E3E529}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B015B9FD-C48C-D0D4-01A3-E30000E3E529}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B015B9FD-C48C-D0D4-01A3-E30000E3E529}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B015B9FD-C48C-D0D4-01A3-E30000E3E529}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B015B9FD-C48C-D0D4-01A3-E30000E3E529}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
