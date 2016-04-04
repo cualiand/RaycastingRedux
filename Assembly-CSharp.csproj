@@ -45,14 +45,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\buttonTest.cs" />
+     <Compile Include="Assets\Scripts\catAI.cs" />
+     <Compile Include="Assets\Scripts\catMouseManager.cs" />
+     <Compile Include="Assets\Scripts\fish.cs" />
+     <Compile Include="Assets\Scripts\fishGod.cs" />
      <Compile Include="Assets\Scripts\groundedJumpDemo.cs" />
      <Compile Include="Assets\Scripts\hideAndSeek.cs" />
+     <Compile Include="Assets\Scripts\mouseAI.cs" />
+     <Compile Include="Assets\Scripts\mouseFishFollow.cs" />
+     <Compile Include="Assets\Scripts\movement.cs" />
      <Compile Include="Assets\Scripts\raycastDemo.cs" />
      <Compile Include="Assets\Scripts\raycastMouseLook.cs" />
-     <Compile Include="Assets\catAI.cs" />
-     <Compile Include="Assets\mouseAI.cs" />
-     <Compile Include="Assets\movement.cs" />
-     <Compile Include="Assets\restartButton.cs" />
+     <Compile Include="Assets\Scripts\restartButton.cs" />
+     <Compile Include="Assets\Scripts\wallMaker.cs" />
+     <Compile Include="Assets\forestManager.cs" />
+     <Compile Include="Assets\listOfAnimals.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

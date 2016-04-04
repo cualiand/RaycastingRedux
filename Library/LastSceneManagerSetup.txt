@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/catAndMouse.unity
+- path: Assets/Scenes/buttontest.unity
   isLoaded: 1
   isActive: 1
