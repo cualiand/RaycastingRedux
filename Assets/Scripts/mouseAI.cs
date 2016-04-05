@@ -17,13 +17,14 @@ public class mouseAI : MonoBehaviour {
         foreach (Transform cats in listOfAnimals.listOfCats)
         {
             Vector3 directionToCat = (cat.position - transform.position);
-            float angle = Vector3.Angle(directionToCat, transform.position);
+            float angle = Vector3.Angle(transform.position, directionToCat);
+            Debug.Log("mouse angle = " + angle);
             if (angle < 180f)
             {
                 Ray mouseRay = new Ray(transform.position, directionToCat);
                 RaycastHit mouseRayHitInfo = new RaycastHit();
 
-                if (Physics.Raycast(mouseRay, out mouseRayHitInfo, 10f))
+                if (Physics.Raycast(mouseRay, out mouseRayHitInfo, 500f))
                 {
                     if (mouseRayHitInfo.collider.tag == "Cat")
                     {

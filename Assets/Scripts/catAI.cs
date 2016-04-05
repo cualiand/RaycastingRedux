@@ -5,8 +5,9 @@ using System.Collections;
 public class catAI : MonoBehaviour {
 
     //public Transform mouse;
-    public float chaseSpeed = 1000f;
+    public float chaseSpeed = 100f;
     //public AudioSource eatSound;
+    
 
 	
 	
@@ -15,10 +16,11 @@ public class catAI : MonoBehaviour {
         
  
         foreach (Transform mice in listOfAnimals.listOfMice)
-        {
+        { 
             Vector3 directionToMouse = (mice.position - transform.position);
             float angle = Vector3.Angle(directionToMouse, transform.position);
-            if (angle < 170f)
+            //Debug.Log("cat angle = " + angle);
+            if (angle < 120f)
             {
                 Debug.Log("mouse seen");
                 Ray catRay = new Ray(transform.position, directionToMouse);
@@ -28,7 +30,7 @@ public class catAI : MonoBehaviour {
                 {
                     if (catRayHitInfo.collider.tag == "Mouse")
                     {
-                        if (catRayHitInfo.distance <= 500f) //when cat sees mouse
+                        if (catRayHitInfo.distance <= 55f) //when cat sees mouse
                         {
                             Debug.Log("mouse chased");
                             GetComponent<Rigidbody>().AddForce(directionToMouse.normalized * chaseSpeed);
@@ -36,7 +38,7 @@ public class catAI : MonoBehaviour {
                         if (catRayHitInfo.distance <= 2f) //when cat touches mouse
                         {
                             Debug.Log("mouse caught!");
-                            // eatSound.PlayOneShot(eatSound.clip, 1f);
+                            //eatSound.PlayOneShot(eatSound.clip, 1f);
                             Destroy(mice.gameObject);
                         }
                     }
